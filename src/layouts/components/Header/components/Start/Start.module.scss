@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .btn-menu {
+        background-color: transparent;
+        padding: 8px;
+        i {
+            color: var(--maincl);
+            font-size: 22px;
+        }
+    }
+    .image-logo {
+        padding: 18px 14px 18px 16px;
+        img {
+            height: 20px;
+        }
+    }
+}

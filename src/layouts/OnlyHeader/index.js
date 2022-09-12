@@ -7,7 +7,9 @@ let cx = classNames.bind(styles);
 function OnlyHeader({ children }) {
     return (
         <div className={cx('container')}>
-            <Header></Header>
+            <div className={cx('header')}>
+                <Header></Header>
+            </div>
             <HideSibar></HideSibar>
             <div className={cx('content')}>{children}</div>
         </div>

@@ -1,5 +1,8 @@
 :root {
-    --main: #181818;
+    --mainbg: #181818;
+    --maincl: white;
+    --subbg: #202020;
+    --mainbd: #373737;
 }
 * {
     margin: 0;
@@ -7,5 +10,14 @@
     box-sizing: border-box;
 }
 html {
-    background-color: var(--main);
+    color: var(--maincl);
+    background-color: var(--mainbg);
+}
+button,
+input {
+    border: none;
+    outline: none;
+}
+a {
+    text-decoration: none;
 }
