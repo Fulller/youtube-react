@@ -1,0 +1,63 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-left: 40px;
+    .search-box {
+        display: flex;
+        align-items: center;
+        .search-form {
+            border: 1px solid #313131;
+            border-radius: 4px 0px 0px 4px;
+            overflow: hidden;
+            display: flex;
+            height: 40px;
+            padding: 2px;
+            align-items: center;
+            background-color: #121212;
+            &:focus-within {
+                border: 1px solid rgba(53, 53, 249, 0.616);
+            }
+            &:focus-within .search-form-btn {
+                display: inline-block;
+            }
+            .input {
+                padding: 0;
+                padding-left: 4px;
+                width: 494px;
+                border: 0;
+                box-sizing: unset;
+                background-color: #121212;
+                color: var(--maincl);
+                font-size: 16px;
+                &:not(:placeholder-shown) ~ .clear-btn {
+                    display: inline-block;
+                }
+            }
+            .search-form-btn {
+                display: none;
+                background-color: #121212;
+            }
+            .clear-btn {
+                display: none;
+                background-color: #121212;
+                font-size: 26px;
+            }
+            .keybroad-btn {
+                background-color: #121212;
+                color: rgba(255, 255, 255, 0.507);
+                width: 28px;
+            }
+        }
+        .search-btn {
+            border-radius: 0px 4px 4px 0px;
+            width: 50px;
+            padding: 6px;
+        }
+    }
+    .btn-microphone {
+        margin-left: 10px;
+        background-color: var(--mainbg);
+        border-radius: 50%;
+    }
+}
