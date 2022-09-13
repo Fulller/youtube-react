@@ -2,11 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    padding-left: 40px;
+    width: 728px;
     .search-box {
         display: flex;
         align-items: center;
         .search-form {
+            padding-left: 40px;
             border: 1px solid #313131;
             border-radius: 4px 0px 0px 4px;
             overflow: hidden;
@@ -30,6 +31,9 @@
                 background-color: #121212;
                 color: var(--maincl);
                 font-size: 16px;
+                &:not(:placeholder-shown) {
+                    width: 454px;
+                }
                 &:not(:placeholder-shown) ~ .clear-btn {
                     display: inline-block;
                 }
@@ -42,6 +46,10 @@
                 display: none;
                 background-color: #121212;
                 font-size: 26px;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border-radius: 50%;
+                }
             }
             .keybroad-btn {
                 background-color: #121212;
@@ -51,13 +59,16 @@
         }
         .search-btn {
             border-radius: 0px 4px 4px 0px;
-            width: 50px;
-            padding: 6px;
+            width: 62px;
+            padding: 1px 6px;
         }
     }
     .btn-microphone {
         margin-left: 10px;
         background-color: var(--mainbg);
         border-radius: 50%;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
     }
 }

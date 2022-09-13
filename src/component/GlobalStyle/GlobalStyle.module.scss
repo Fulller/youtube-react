@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 :root {
     --mainbg: #181818;
     --maincl: white;
@@ -12,6 +13,7 @@
 html {
     color: var(--maincl);
     background-color: var(--mainbg);
+    font-family: 'Roboto', sans-serif;
 }
 button,
 input {

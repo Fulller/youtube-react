@@ -1,0 +1,25 @@
+.wrapper {
+    width: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    .upload {
+        background-color: transparent;
+    }
+    .nofiti {
+        background-color: transparent;
+    }
+    .avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        img {
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 16px;
+        }
+    }
+}

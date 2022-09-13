@@ -1,0 +1,20 @@
+.wrapper {
+    position: relative;
+    top: -2px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0px;
+    background-color: var(--subbg);
+    border: 1.5px solid #373737;
+    font-size: 16px;
+    .item {
+        padding: 16px;
+        font-size: 10px 16px;
+        i {
+            margin-right: 12px;
+        }
+        &:hover {
+            background-color: #373737;
+        }
+    }
+}
