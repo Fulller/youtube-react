@@ -18,7 +18,7 @@ function NotifiItem({ data }) {
                 </div>
                 <div className={cx('option-item')}>
                     <i class="fa-solid fa-list-ul"></i>
-                    <span>Tất cả thông báo từ {data.chanel}</span>
+                    <span>Tắt tất cả thông báo từ {data.chanel}</span>
                 </div>
             </div>
         );

@@ -109,7 +109,7 @@
     border-radius: 6px;
     position: relative;
     top: -56px;
-    box-shadow: 0px 0px 4px #373737;
+    box-shadow: 0px 0px 4px black;
     .option-item {
         padding-left: 16px;
         padding-right: 12px;
@@ -120,6 +120,9 @@
         align-items: center;
         &:hover {
             background-color: #373737;
+        }
+        i {
+            padding-right: 12px;
         }
     }
 }
