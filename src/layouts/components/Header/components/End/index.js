@@ -8,11 +8,13 @@ import Button from '../../../../../component/Button';
 import Avatar from '../../../.././../assets/image/Avatar.jpg';
 import UploadPopper from './components/UploadPopper';
 import NotifiPopper from './components/NotifiPopper';
+import AvatarPopper from './components/AvatarPopper';
 
 let cx = classNames.bind(style);
 function End() {
     let [isShowUpload, setIsShowUpload] = useState(false);
     let [isShowNotifi, setIsShowNotifi] = useState(false);
+    let [isShowAvatar, setIsShowAvatar] = useState(false);
     function handleShow(isShow, setIsShow) {
         isShow ? setIsShow(false) : setIsShow(true);
     }
@@ -63,10 +65,29 @@ function End() {
                     </div>
                 </Tippy>
             </Headless>
-
-            <Button transparent className={cx('avatar')}>
-                <img src={Avatar}></img>
-            </Button>
+            <Headless
+                onClickOutside={() => {
+                    setIsShowAvatar(false);
+                }}
+                visible={isShowAvatar}
+                interactive
+                placement="left"
+                render={(attrs) => (
+                    <div tabIndex="-1" {...attrs}>
+                        <AvatarPopper></AvatarPopper>
+                    </div>
+                )}
+            >
+                <div>
+                    <Button
+                        transparent
+                        className={cx('avatar')}
+                        onClick={() => handleShow(isShowAvatar, setIsShowAvatar)}
+                    >
+                        <img src={Avatar}></img>
+                    </Button>
+                </div>
+            </Headless>
         </div>
     );
 }
