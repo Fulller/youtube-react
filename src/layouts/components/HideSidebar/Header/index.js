@@ -1,20 +1,26 @@
 import { useContext } from 'react';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-import style from './Start.module.scss';
+import style from './Header.module.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
-import { GlobalContext } from '../../../../../App';
-import logo from '../../../../../assets/image/Logo.png';
+import styleHide from '../HideSidebar.module.scss';
+
+import { GlobalContext } from '../../../../App';
+import logo from '../../../../assets/image/Logo.png';
 let cx = classNames.bind(style);
-function Start() {
+let cf = classNames.bind(styleHide);
+function Header({ wrapperRef, showbarRef }) {
     let [state, dispatch] = useContext(GlobalContext);
     return (
         <div className={cx('wrapper')}>
             <button
                 className={cx('btn-menu')}
                 onClick={(e) => {
-                    dispatch('isShowHideSidebar');
+                    showbarRef.current.className = cf('showbar', 'hide');
+                    setTimeout(() => {
+                        dispatch('isShowHideSidebar');
+                    }, 400);
                 }}
             >
                 <i className="fa-solid fa-bars"></i>
@@ -29,4 +35,4 @@ function Start() {
         </div>
     );
 }
-export default Start;
+export default Header;

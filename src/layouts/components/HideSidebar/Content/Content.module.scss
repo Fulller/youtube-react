@@ -1,0 +1,89 @@
+.wrapper {
+    overflow: auto;
+    height: calc(100% - 56px);
+    .content-group {
+        padding: 12px 0px;
+        border-bottom: 1.5px solid var(--mainbd);
+
+        .title {
+            padding: 8px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.5);
+            box-sizing: inherit;
+            height: 33px;
+            display: inline-flex;
+            align-items: center;
+            letter-spacing: 1px;
+        }
+        .content-item {
+            padding: 0px 24px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            .signal {
+                flex: 1;
+                display: inline-flex;
+                justify-content: right;
+                text-align: end;
+                img {
+                    width: 12px;
+                    margin: 0;
+                    color: red;
+                }
+            }
+            .avatar {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 24px;
+                overflow: hidden;
+            }
+            span i {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 24px;
+                height: 24px;
+                margin-right: 24px;
+            }
+            i {
+                font-size: 18px;
+            }
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+    .footer {
+        .footer-data-group {
+            padding: 16px 24px 0px 24px;
+            display: flex;
+            flex-wrap: wrap;
+            .footer-data-item {
+                display: inline;
+                line-height: 18px;
+                font-size: 13px;
+                margin-right: 8px;
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+        .footer-powered {
+            line-height: 18px;
+            padding: 16px 24px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            width: 100%;
+        }
+    }
+}
+.popper-item {
+    font-size: 12px;
+    background-color: rgba(170, 170, 170, 0.3);
+    border: 1px solid white;
+    padding: 6px;
+    position: relative;
+    top: -16px;
+}
