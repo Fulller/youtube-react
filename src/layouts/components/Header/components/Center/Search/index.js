@@ -1,8 +1,10 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import Headless from '@tippyjs/react/headless';
 import style from '../Center.module.scss';
 import classNames from 'classnames/bind';
+
 import Button from '../../../../../../component/Button';
 
 let cx = classNames.bind(style);

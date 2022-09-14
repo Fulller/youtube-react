@@ -1,18 +1,30 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import styles from './AvatarPopper.module.scss';
 import classNames from 'classnames/bind';
 import listToll from './listToll';
 
 import Avatar from '../../../../../../../assets/image/Avatar.jpg';
+import { AvatarContext } from '../../../End';
 
 let cx = classNames.bind(styles);
 function AvatarPopper() {
-    let [secondMenu, setSecondMenu] = useState({});
+    let [secondMenu, setSetcondMenu] = useContext(AvatarContext);
     function handleNextMenu(data) {
-        setSecondMenu({ ...data });
+        setSetcondMenu({ ...data });
     }
     function handlePrevMenu() {
-        setSecondMenu({});
+        setSetcondMenu({});
+    }
+    function handleClickCheck(listItem, index) {
+        for (let i in listItem) {
+            if (listItem[i].check) {
+                listItem[i].check = false;
+            }
+        }
+        listItem[index].check = true;
+        let newState = { ...secondMenu };
+        newState.data[index].check = true;
+        setSetcondMenu({ ...newState });
     }
     function Menu1() {
         return (
@@ -71,7 +83,13 @@ function AvatarPopper() {
                 <div className={cx('list-item')}>
                     {listItem.map((item, index) => {
                         return (
-                            <div className={cx('item')} key={index}>
+                            <div
+                                className={cx('item')}
+                                key={index}
+                                onClick={() => {
+                                    handleClickCheck(listItem, index);
+                                }}
+                            >
                                 <span className={cx('check')}>
                                     {item.check ? <i class="fa-solid fa-check"></i> : <></>}
                                 </span>
