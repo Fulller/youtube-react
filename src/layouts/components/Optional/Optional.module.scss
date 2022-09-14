@@ -1,4 +1,29 @@
 .wrapper {
     border-top: 1.5px solid var(--mainbd);
+    border-bottom: 1.5px solid var(--mainbd);
     height: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 100px;
+    overflow: auto;
+    .option {
+        display: inline-flex;
+        align-items: center;
+        height: 30px;
+        font-size: 14px;
+        padding: 0px 12px;
+        border-radius: 15px;
+        color: var(--maincl);
+        background-color: var(--mainbd);
+        margin-right: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        &:hover:not(.active) {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+    .active {
+        background-color: var(--maincl);
+        color: var(--mainbd);
+    }
 }
