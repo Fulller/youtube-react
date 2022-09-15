@@ -18,9 +18,10 @@ function Header({ wrapperRef, showbarRef }) {
                 className={cx('btn-menu')}
                 onClick={(e) => {
                     showbarRef.current.className = cf('showbar', 'hide');
+                    wrapperRef.current.className = cf('wrapper', 'wrapperHide');
                     setTimeout(() => {
                         dispatch('isShowHideSidebar');
-                    }, 400);
+                    }, 200);
                 }}
             >
                 <i className="fa-solid fa-bars"></i>

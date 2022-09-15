@@ -14,12 +14,13 @@ function HideSidebar() {
     function handleClickOutside(e) {
         if (e.target == wrapperRef.current) {
             showbarRef.current.className = cx('showbar', 'hide');
+            wrapperRef.current.className = cx('wrapper', 'wrapperHide');
         }
         setTimeout(() => {
             if (e.target == wrapperRef.current) {
                 dispatch('isShowHideSidebar');
             }
-        }, 400);
+        }, 200);
     }
     return state.isShowHideSidebar ? (
         <div ref={wrapperRef} className={cx('wrapper')} id="hide-sidebar" onClick={(e) => handleClickOutside(e)}>
