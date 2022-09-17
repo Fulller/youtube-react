@@ -63,7 +63,7 @@ function Search() {
     //             });
     //         });
     //         dispatch(['setSearch', [...result]]);
-    //     }, 1000);
+    //     }, 500);
     // }, [searchV]);
     return (
         <div className={cx('search-box')}>

@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
 
+import VideoItem from './VideoItem';
 import Button from '../../component/Button';
 import style from './Watch.module.scss';
 import { GlobalContext } from '../../App';
@@ -41,10 +42,10 @@ let listAction = [
 function Watch() {
     let [globalState, dispatch] = useContext(GlobalContext);
     let video = globalState.currentVideo;
-    console.log(video);
+    let listVideo = globalState.videoSearch;
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('left')}>
+            <div className={cx('left')} id="watch">
                 <iframe
                     width="667"
                     height="375"
@@ -91,7 +92,11 @@ function Watch() {
                 </div>
                 {/* <div className={cx('comment')}></div> */}
             </div>
-            <div className={cx('right')}></div>
+            <div className={cx('right')}>
+                {listVideo.map((video, index) => {
+                    return <VideoItem data={video.items[0]} key={index}></VideoItem>;
+                })}
+            </div>
         </div>
     );
 }

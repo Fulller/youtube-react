@@ -12,6 +12,7 @@
     box-sizing: border-box;
 }
 html {
+    scroll-behavior: smooth;
     color: var(--maincl);
     background-color: var(--mainbg);
     font-family: 'Roboto', sans-serif;
