@@ -10,6 +10,8 @@
     .option {
         display: inline-flex;
         align-items: center;
+        text-align: center;
+        justify-content: center;
         height: 30px;
         font-size: 14px;
         padding: 0px 12px;
@@ -21,9 +23,24 @@
         &:hover:not(.active) {
             background-color: rgba(255, 255, 255, 0.2);
         }
+        div {
+            display: block;
+            white-space: nowrap;
+        }
     }
     .active {
         background-color: var(--maincl);
         color: var(--mainbd);
+    }
+    &::-webkit-scrollbar {
+        height: 1px;
+    }
+    &::-webkit-scrollbar-track {
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
     }
 }

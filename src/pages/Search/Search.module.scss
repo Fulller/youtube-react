@@ -1,0 +1,54 @@
+.wrapper {
+    margin-top: 56px;
+    padding: 24px;
+    .video-item {
+        display: flex;
+        height: 202px;
+        margin-bottom: 18px;
+        .thumbnail {
+            width: 360px;
+            height: 202px;
+            .thumbnail-image {
+                width: 360px;
+                height: 202px;
+                object-fit: cover;
+            }
+        }
+        .content {
+            padding-left: 16px;
+            .title {
+                font-size: 18px;
+                list-style: 26px;
+                font-weight: 400;
+                color: var(--maincl);
+            }
+            .channel {
+                display: flex;
+                align-items: center;
+                padding: 12px 0px;
+                .channel-image {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                }
+                .channel-name {
+                    font-size: 12px;
+                    line-height: 18px;
+                    padding-left: 12px;
+                    color: var(--subcl);
+                }
+            }
+            .discription {
+                font-size: 12px;
+                line-height: 18px;
+                padding-left: 12px;
+                color: var(--subcl);
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 1;
+            }
+        }
+    }
+}

@@ -3,15 +3,29 @@ import GlobalStyle from './component/GlobalStyle';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { PublicRoute } from './routes';
 
+import listVideo from './assets/listVideo';
 let GlobalContext = createContext();
 let initValue = {
     isShowHideSidebar: false,
+    videoSearch: [...listVideo],
+    currentVideo: {},
 };
-function reducer(state, action) {
+function reducer(state, [action, data]) {
+    let newState;
     switch (action) {
         case 'isShowHideSidebar': {
-            let newState = { ...state };
+            newState = { ...state };
             newState.isShowHideSidebar = !newState.isShowHideSidebar;
+            return { ...newState };
+        }
+        case 'setSearch': {
+            newState = { ...state };
+            newState.videoSearch = data;
+            return { ...newState };
+        }
+        case 'setVideo': {
+            newState = { ...state };
+            newState.currentVideo = data;
             return { ...newState };
         }
         default:

@@ -18,7 +18,7 @@ function HideSidebar() {
         }
         setTimeout(() => {
             if (e.target == wrapperRef.current) {
-                dispatch('isShowHideSidebar');
+                dispatch(['isShowHideSidebar']);
             }
         }, 200);
     }

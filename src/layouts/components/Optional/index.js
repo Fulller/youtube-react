@@ -21,13 +21,13 @@ function Optional() {
         <div className={cx('wrapper')}>
             {listOt.map((option, index) => {
                 return (
-                    <span
+                    <div
                         onClick={() => handeleCheck(index)}
                         key={index}
                         className={cx('option', `${option.check ? 'active' : ''}`)}
                     >
-                        {option.title}
-                    </span>
+                        <div>{option.title}</div>
+                    </div>
                 );
             })}
         </div>

@@ -20,7 +20,7 @@ function Header({ wrapperRef, showbarRef }) {
                     showbarRef.current.className = cf('showbar', 'hide');
                     wrapperRef.current.className = cf('wrapper', 'wrapperHide');
                     setTimeout(() => {
-                        dispatch('isShowHideSidebar');
+                        dispatch(['isShowHideSidebar']);
                     }, 200);
                 }}
             >

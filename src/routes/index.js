@@ -4,6 +4,7 @@ import Explore from '../pages/Explore';
 import Shorts from '../pages/Shorts';
 import Subscriptions from '../pages/Subscriptions';
 import Library from '../pages/Library';
+import Search from '../pages/Search';
 import { MainLayout, OnlyHeader } from '../layouts';
 
 let PublicRoute = [
@@ -40,6 +41,11 @@ let PublicRoute = [
     {
         element: Library,
         path: '/library',
+        layout: MainLayout,
+    },
+    {
+        element: Search,
+        path: '/search',
         layout: MainLayout,
     },
 ];

@@ -14,7 +14,7 @@ function Start() {
             <button
                 className={cx('btn-menu')}
                 onClick={(e) => {
-                    dispatch('isShowHideSidebar');
+                    dispatch(['isShowHideSidebar']);
                 }}
             >
                 <i className="fa-solid fa-bars"></i>
