@@ -5,6 +5,7 @@
     left: 0;
     right: 0;
     background-color: var(--subbg);
+    z-index: 999;
 }
 .sidebar {
     position: fixed;
@@ -12,6 +13,7 @@
     left: 0;
     width: 72px;
     bottom: 0;
+    z-index: 1000;
 }
 .content {
     width: 100%;

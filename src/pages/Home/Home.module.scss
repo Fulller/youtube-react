@@ -1,0 +1,62 @@
+.wrapper {
+    margin-top: 56px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 32px 12px;
+    .video-item {
+        transform: scale(1);
+        transition: all 0.5s;
+        background-color: var(--mainbg);
+        &:hover .channel .ellips {
+            visibility: visible;
+        }
+        &:hover {
+            position: relative;
+            z-index: 1;
+            transition-delay: 2s;
+            transform: scale(1.25);
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px black;
+        }
+        .thumbnail {
+            width: 100%;
+            height: 154px;
+            object-fit: cover;
+        }
+        .channel {
+            display: flex;
+            align-items: center;
+            .avatar {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+            }
+            .title {
+                color: var(--maincl);
+                margin-left: 8px;
+                font-size: 13px;
+                line-height: 20px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+            }
+            .ellips {
+                color: var(--maincl);
+                visibility: hidden;
+                flex: 1;
+                padding: 8px 12px;
+            }
+        }
+        .channel-title {
+            font-size: 12px;
+            line-height: 18px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+            margin-top: 4px;
+            margin-left: 44px;
+        }
+    }
+}

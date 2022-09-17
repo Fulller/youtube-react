@@ -9,7 +9,6 @@ let cx = classNames.bind(style);
 function Search() {
     let [globalState, dispatch] = useContext(GlobalContext);
     let listVideo = globalState.videoSearch;
-    console.log(listVideo);
     listVideo = listVideo.map((video) => {
         return video.items[0];
     });

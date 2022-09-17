@@ -36,7 +36,7 @@ function Search() {
     //     // let key = 'AIzaSyBzZYEEXnO39tIoiFn0QF5sNCk09UkxGe0';
     //     let key = 'AIzaSyDPWjnVKbmomvtifoIpeXs04G9crMOrnZ8';
     //     let callSearch = function () {
-    //         let searchURL = `${http}search?maxResults=1&q=${valueSearch}&type=video&key=${key}`;
+    //         let searchURL = `${http}search?maxResults=10&q=${valueSearch}&type=video&key=${key}`;
     //         return fetch(searchURL)
     //             .then((res) => res.json())
     //             .then((data) => data.items);
