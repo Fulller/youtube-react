@@ -45,7 +45,7 @@ function Watch() {
     let listVideo = globalState.videoSearch;
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('left')} id="watch">
+            <div className={cx('left')}>
                 <iframe
                     width="667"
                     height="375"

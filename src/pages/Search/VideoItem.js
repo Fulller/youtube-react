@@ -9,6 +9,7 @@ let cx = classNames.bind(style);
 function VideoItem({ data }) {
     let [globalState, dispatch] = useContext(GlobalContext);
     function hanleClickWatch() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         dispatch(['setVideo', data]);
     }
     return (

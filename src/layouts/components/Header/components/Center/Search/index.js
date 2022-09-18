@@ -12,9 +12,10 @@ import SearchResult from './SearchResult';
 
 let cx = classNames.bind(style);
 let timeDelaySearch;
+let result = [];
+let link = '';
 function Search() {
     let inputRef = useRef();
-    let result = [];
     let [globalState, dispatch] = useContext(GlobalContext);
     let [showSearch, setShowSearch] = useState(false);
     let [searchV, setSearchV] = useState('');
@@ -33,8 +34,8 @@ function Search() {
     // useEffect(() => {
     //     let valueSearch = searchV.trim();
     //     let http = 'https://youtube.googleapis.com/youtube/v3/';
-    //     // let key = 'AIzaSyBzZYEEXnO39tIoiFn0QF5sNCk09UkxGe0';
-    //     let key = 'AIzaSyDPWjnVKbmomvtifoIpeXs04G9crMOrnZ8';
+    //     let key = 'AIzaSyBzZYEEXnO39tIoiFn0QF5sNCk09UkxGe0';
+    //     // let key = 'AIzaSyDPWjnVKbmomvtifoIpeXs04G9crMOrnZ8';
     //     let callSearch = function () {
     //         let searchURL = `${http}search?maxResults=10&q=${valueSearch}&type=video&key=${key}`;
     //         return fetch(searchURL)
@@ -62,7 +63,6 @@ function Search() {
     //                 return video.items[0].snippet.title;
     //             });
     //         });
-    //         dispatch(['setSearch', [...result]]);
     //     }, 500);
     // }, [searchV]);
     return (
@@ -92,11 +92,22 @@ function Search() {
                 </div>
             </Headless>
             <Tippy content="Tìm kiếm">
-                <Link to="/search">
-                    <Button className={cx('search-btn')}>
+                <Button
+                    className={cx('search-btn')}
+                    onClick={() => {
+                        if (inputRef.current.value != '') {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                            // dispatch(['setSearch', [...result]]);
+                            link = '';
+                        } else {
+                            link = '/search';
+                        }
+                    }}
+                >
+                    <Link to={link}>
                         <i class="fa-solid fa-magnifying-glass"></i>
-                    </Button>
-                </Link>
+                    </Link>
+                </Button>
             </Tippy>
         </div>
     );
